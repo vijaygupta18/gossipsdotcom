@@ -1,0 +1,38 @@
+.vertical-center {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.vertical-center .container-fluid {
+  flex-grow:1
+}
+h1 {
+  margin: 10px 0;
+}
+.messages p {
+  margin: 6px 0;
+}
+.mymessages {
+  text-align: right;
+  color: #226fb8;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1em;
+}
+ul.messages.list-group {
+  max-height: 45vh;
+  overflow-y: scroll;
+}
+.typing {
+  font-style: italic;
+}
+.msg-delieverd {
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+  color: #010a11;
+}
+.msg-read {
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+  color: #1c3ae6;
+}
