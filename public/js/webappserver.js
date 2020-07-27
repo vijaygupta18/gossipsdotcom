@@ -18,7 +18,7 @@ var socket = io();
  function timeoutFunction() {
    typing = false;
    socket.emit('typing', {
-     text: name + " stopped typing"
+     text: ""
    });
  }
 
