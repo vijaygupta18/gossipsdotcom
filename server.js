@@ -5,6 +5,8 @@ var http = require("http").Server(app);
 
 
 var moment = require("moment");
+//add extra music here
+
 var music = {'tabla' : 'sound/tabla.mp3',
              'flute' : 'sound/flute_classic.mp3',
              'piano' : 'sound/piano.mp3',          
