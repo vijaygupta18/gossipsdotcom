@@ -1,3 +1,4 @@
+//use the function created before this js to get the values
 var socket = io();
  var name = getQueryVariable("name") || 'Anonymous';
  var room = getQueryVariable("room") || 'No Room Selected';
