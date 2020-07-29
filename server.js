@@ -5,8 +5,6 @@ var http = require("http").Server(app);
 
 
 var moment = require("moment");
-//add extra music here
-
 var music = {'tabla' : 'sound/tabla.mp3',
              'flute' : 'sound/flute_classic.mp3',
              'piano' : 'sound/piano.mp3',          
@@ -15,6 +13,7 @@ var music = {'tabla' : 'sound/tabla.mp3',
              'sitar' : 'sound/sitar.mp3',
              'chill' : 'sound/chill.mp3',
              'demon' : 'sound/demons.mp3',
+            'mood' : 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3',
              
              'edm' : 'sound/edm.mp3'
             };
