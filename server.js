@@ -13,8 +13,9 @@ var music = {'tabla' : 'sound/tabla.mp3',
              'guitar' : 'sound/guitar.mp3',
              'dhol' : 'sound/dhol.mp3',
              'sitar' : 'sound/sitar.mp3',
-             'demons' : 'sound/demons.mp3',
              'chill' : 'sound/chill.mp3',
+             'demon' : 'sound/demons.mp3',
+             
              'edm' : 'sound/edm.mp3'
             };
 
@@ -110,8 +111,7 @@ io.on("connection", function(socket) {
       if(p) 
       { console.log(p); 
         var data = {url:p};
-      
-        io.in(clientInfo[socket.id].room).emit('music',data);
+      io.in(clientInfo[socket.id].room).emit('music',data);
       }
     } console.log("args",args);
     if(args[0]=="pause")
