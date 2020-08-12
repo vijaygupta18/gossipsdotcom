@@ -109,12 +109,12 @@ io.on("connection", function(socket) {
       { console.log(p); 
         var data = {url:p};
       
-        io.in(clientInfo[socket.id].room).emit('music',data);
+        io.in(clientInfo[socket.id].room).emit("music",data);
       }
     } console.log("args",args);
     if(args[0]=="pause")
     {
-      io.in(clientInfo[socket.id].room).emit('pause',{});
+      io.in(clientInfo[socket.id].room).emit("pause",{});
       
     }
     if (message.text === "@currentUsers") {
