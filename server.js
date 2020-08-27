@@ -5,14 +5,10 @@ var http = require("http").Server(app);
 
 
 var moment = require("moment");
-var music = {'tabla' : 'sound/tabla.mp3',
+var music = {
              'flute' : 'sound/flute_classic.mp3',
              'piano' : 'sound/piano.mp3',          
              'guitar' : 'sound/guitar.mp3',
-             'dhol' : 'sound/dhol.mp3',
-             'sitar' : 'sound/sitar.mp3',
-             'demons' : 'sound/demons.mp3',
-             'chill' : 'sound/chill.mp3',
              'edm' : 'sound/edm.mp3'
             };
 
