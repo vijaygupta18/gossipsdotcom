@@ -9,7 +9,11 @@ var music = {
              'flute' : 'sound/flute_classic.mp3',
              'piano' : 'sound/piano.mp3',          
              'guitar' : 'sound/guitar.mp3',
-             'edm' : 'sound/edm.mp3'
+             'edm' : 'sound/edm.mp3',
+             'chill' : 'sound/chill.mp3',
+             'demons' : 'sound/demons.mp3',
+              'sitar' : 'sound/sitar.mp3'
+  
             };
 
 var clientInfo = {};
@@ -87,7 +91,7 @@ io.on("connection", function(socket) {
   });
 
   socket.emit("message", {
-    text: "Welcome to Gossip-Dot-Com !",
+    text: "Welcome to Gossips-Dot-Com !",
     timestamp: moment().valueOf(),
     name: "Natasha"
   });
