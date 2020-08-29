@@ -1,4 +1,4 @@
-# gossipsdotcom
+# GossipsDotCom
 This is a Web Chat app.
 
 Deployed on Heroku.
