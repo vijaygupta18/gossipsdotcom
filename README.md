@@ -4,8 +4,7 @@ This is a Web Chat app.
 Deployed on Heroku.
 
 Steps to use:
-1- Click on the link to visit app ;-https://gossipsdotcom.herokuapp.com/
-
+1- [Click here to visit app](https://gossipsdotcom.herokuapp.com/)
 2- Enter Your name
 
 3-Enter the Gossip ID.
