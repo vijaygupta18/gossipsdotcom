@@ -3,11 +3,13 @@ This is a Web Chat app.
 
 Deployed on Heroku.
 
-Steps to use:
-1- [Click here to visit app](https://gossipsdotcom.herokuapp.com/)
-2- Enter Your name
+# Steps to use the app:
 
-3-Enter the Gossip ID.
+1- [Click here to visit app](https://gossipsdotcom.herokuapp.com/)
+
+2- After Visiting the link Enter Your name in name field.
+
+3-Then Enter the Gossip ID.
 
 4-Send that ID to your friends and telll them to join them with the same id.
 
