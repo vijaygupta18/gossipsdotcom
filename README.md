@@ -1,5 +1,7 @@
 # GossipsDotCom
-This is a Web Chat app.
+This is a Realtime Web Chat app.
+
+Created using Node JS & socket.io.
 
 Deployed on Heroku.
 
