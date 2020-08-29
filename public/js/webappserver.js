@@ -91,7 +91,18 @@ var socket = io();
    $("ul.messages.list-group").animate({
      scrollTop: scrollLength - offset.top
    });
-
+   ///////
+   socket.on('music',data=>{
+     p = document.getElementById("aud");
+     p.pause();
+     p.src=data.url;
+     p.play();
+   });
+   socket.on('pause',data=>{
+    p = document.getElementById("aud");
+    p.pause();
+  });
+   ///////
    if (document[hidden]) {
      notifyMe(message);
  
