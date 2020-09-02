@@ -14,10 +14,11 @@ h1 {
   margin: 6px 0;
 }
 .mymessages {
-  text-align: right;
-  color: #226fb8;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 1em;
+   text-align: right;
+  color: #1f5385;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
 }
 ul.messages.list-group {
   max-height: 45vh;
