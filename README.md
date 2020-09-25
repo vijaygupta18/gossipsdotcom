@@ -5,7 +5,7 @@ Created using Node JS & socket.io.
 
 Deployed on Heroku.
 
-![Page](2.JPG?raw=true "page")
+
 
 # Steps to use the app:
 
