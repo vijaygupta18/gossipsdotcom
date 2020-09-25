@@ -21,4 +21,7 @@ Deployed on Heroku.
 
 6-Type pause to stop the music.
 
+
+![HomePage](1.JPG?raw=true "Homepage")
+
 ## Let's know if you want more improvement.
