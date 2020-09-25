@@ -5,9 +5,13 @@ Created using Node JS & socket.io.
 
 Deployed on Heroku.
 
+![Page](2.JPG?raw=true "page")
+
 # Steps to use the app:
 
 1- [Click here to visit app](https://gossipsdotcom.herokuapp.com/)
+
+![HomePage](1.JPG?raw=true "Homepage")
 
 2- After Visiting the link Enter Your name in name field.
 
@@ -22,6 +26,6 @@ Deployed on Heroku.
 6-Type pause to stop the music.
 
 
-![HomePage](1.JPG?raw=true "Homepage")
 
-## Let's know if you want more improvement.
+
+## Let us know if you want more improvement.
