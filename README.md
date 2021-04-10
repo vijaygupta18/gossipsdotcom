@@ -32,3 +32,12 @@ Deployed on Heroku.
 
 
 # Let us know if you want more improvement.
+
+
+
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
