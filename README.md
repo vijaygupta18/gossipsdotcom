@@ -35,7 +35,7 @@ Deployed on Heroku.
 
 
 
-```diff
+
 - text in red
 + text in green
 ! text in orange
