@@ -176,7 +176,8 @@ io.on("connection", function(socket) {
     var args = str.split(" ");
     if(args[0]=="play") 
     { var name = args.substr(args.indexOf(" ") + 1);
-     p=grab(name);
+//      p=grab(name);
+     p="";
       if(p) 
       { console.log(p); 
         var data = {url:p};
