@@ -154,22 +154,22 @@ io.on("connection", function(socket) {
         async function grab(name){
           var s=name;
          s=s.charAt(0).toUpperCase()+s.slice(1);;
-          socket.emit("message", {
-            text: "Playing Your Requested Song : "+s,
-            timestamp: moment().valueOf(),
-            name: "Natasha"
-          });
+          
           
           var songs=  await songgrabber(name)
           var data = {url:songs.url};
-              
+          socket.emit("message", {
+            text: "Playing Your Requested Song : "+songs.song,
+            timestamp: moment().valueOf(),
+            name: "Natasha"
+          });
             io.in(clientInfo[socket.id].room).emit("music",data);
         
         }
       }
     } 
     // console.log("args",args);
-    if(args[0]==".pause")
+    if(args[0]==".pause" || args[0]==".p" )
     {
       io.in(clientInfo[socket.id].room).emit("pause",{});
       
