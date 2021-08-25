@@ -1,9 +1,12 @@
 # GossipsDotCom
-This is a Realtime Web Chat app.
+
+This is an Online Web Chat app where you can chat and listen music at the same time.
 
 Created using Node JS & socket.io.
 
 Deployed on Heroku.
+
+Music feature works on the JioSaavan Api.
 
 
 
@@ -22,12 +25,14 @@ Deployed on Heroku.
 
  4-Send that ID to your friends and tell them to join them with the same id.
 
- 5-You can also listen Music by using  play music_name  musicname{chill,demons,edm,piano,flute,guitar,sitar} use any one of them
-(You can also add the music of your choice in music folder)
+ 6- Now you can Chat with your friends.
 
 
- 6-Type pause to stop the music.
+# Steps to listen music on this app:
 
+-> Type ".play yoursongname"
+
+-> To Stop the Song Type ".pause"  
 
 
 
