@@ -148,14 +148,14 @@ io.on("connection", function(socket) {
     var args = str.split(" ");
     if(args[0]==".play") 
     { song=str.substr(str.indexOf(" ") + 1);
-      
-      
       if(song) 
       {  
         grab(song);
         async function grab(name){
+          var s=name;
+         s=s.charAt(0).toUpperCase()+s.slice(1);;
           socket.emit("message", {
-            text: "Playing Your Requested Song : "+name,
+            text: "Playing Your Requested Song : "+s,
             timestamp: moment().valueOf(),
             name: "Natasha"
           });
