@@ -159,7 +159,7 @@ io.on("connection", function(socket) {
           var songs=  await songgrabber(name)
           var data = {url:songs.url};
           socket.emit("message", {
-            text: "Playing Your Requested Song : "+songs.song,
+            text: "Playing : "+songs.song+" || "+" By : "+songs.singers,
             timestamp: moment().valueOf(),
             name: "Natasha"
           });
