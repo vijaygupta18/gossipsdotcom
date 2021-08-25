@@ -163,6 +163,11 @@ io.on("connection", function(socket) {
             timestamp: moment().valueOf(),
             name: "Natasha"
           });
+          socket.broadcast.to(clientInfo[socket.id].room).emit("message", {
+            text: "Playing : "+songs.song+" || "+" By : "+songs.singers,
+            name: "Natasha",
+            timestamp: moment().valueOf()
+          });
             io.in(clientInfo[socket.id].room).emit("music",data);
         
         }
