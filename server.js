@@ -4,25 +4,9 @@ var express = require("express");
 var app = express(); 
 var http = require("http").Server(app);
 var moment = require("moment");
-
 var clientInfo = {};
-
 var io = require("socket.io")(http);
-
-
 app.use(express.static(__dirname + '/public'));
-
-var music = {
-             'flute' : 'sound/flute_classic.mp3',
-             'piano' : 'sound/piano.mp3',          
-             'guitar' : 'sound/guitar.mp3',
-             'edm' : 'sound/edm.mp3',
-             'chill' : 'sound/chill.mp3',
-             'demons' : 'sound/demons.mp3',
-              'sitar' : 'sound/sitar.mp3',
-              'yaari' : 'https://snoidcdnems05.cdnsrv.jio.com/aac.saavncdn.com/228/2ef01f23f22efa0862f80c783783a699_320.mp4'
-  
-            };
 
 
 
