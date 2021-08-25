@@ -170,7 +170,12 @@ io.on("connection", function(socket) {
       {  
         grab(song);
         async function grab(name){
-         
+          socket.emit("message", {
+            text: "Playing Your Requested Song : "+name,
+            timestamp: moment().valueOf(),
+            name: "Natasha"
+          });
+          
           var songs=  await songgrabber(name)
           var data = {url:songs.url};
               
