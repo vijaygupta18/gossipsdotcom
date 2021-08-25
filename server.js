@@ -1,8 +1,17 @@
 var PORT = process.env.PORT || 3000; 
+const fetch = require("node-fetch");
 var express = require("express");
 var app = express(); 
 var http = require("http").Server(app);
 var moment = require("moment");
+
+var clientInfo = {};
+
+var io = require("socket.io")(http);
+
+
+app.use(express.static(__dirname + '/public'));
+
 var music = {
              'flute' : 'sound/flute_classic.mp3',
              'piano' : 'sound/piano.mp3',          
@@ -17,12 +26,61 @@ var music = {
 
 
 
-var clientInfo = {};
-
-var io = require("socket.io")(http);
+//--------------music section-------------------------//
 
 
-app.use(express.static(__dirname + '/public'));
+
+async function songgrabber(songname) {
+try{
+let url = "https://www.jiosaavn.com/api.php?__call=autocomplete.get&_format=json&_marker=0&cc=in&includeMetaTags=1&query=" + songname;
+var response = await fetch(url) //RUN RUN RUN
+var resdata = await response.json();
+var songdata = resdata['songs']['data']
+const id = songdata[0]['id'];
+
+
+// console.log(songids)
+    let songurl= await singleidurl(id)
+    if(song==undefined)
+    songurl="";
+return songurl;
+}catch (error) {}
+}
+
+
+async function singleidurl(id){
+try{
+let url = "https://www.jiosaavn.com/api.php?__call=song.getDetails&cc=in&_marker=0%3F_marker%3D0&_format=json&pids=" + id
+let response = await fetch(url)
+let resdata = await response.json()
+return helper(resdata[id])
+}catch (error) {}
+}
+
+
+
+function helper(data){
+try{
+    if('media_preview_url' in data){
+       var url = data['media_preview_url'];
+       url = url.replace('preview', 'aac');
+    }
+
+    if(data['320kbps'] == 'true'){
+        url = url.replace("_96_p.mp4", "_320.mp4")
+    }
+    else{
+        url = url.replace("_96_p.mp4", "_160.mp4")
+    }
+    var dict = { 'song': data['song'], 'singers': data['singers'],'thumbnail':data['image'] ,'url': url}
+    return dict
+  }catch (error) {}
+}
+
+
+//----------------------- music section over ^^^^^^^^^^^^^^^^----------------//
+
+
 
 
 function sendCurrentUsers(socket) { 
@@ -104,16 +162,25 @@ io.on("connection", function(socket) {
     var str = message.text;
     str = str.toLowerCase();
     var args = str.split(" ");
-    if(args[0]=="play") 
-    { p = music[args[1]];
-      if(p) 
-      { console.log(p); 
-        var data = {url:p};
+    if(args[0]==".play") 
+    { song=str.substr(str.indexOf(" ") + 1);
       
-        io.in(clientInfo[socket.id].room).emit("music",data);
+      
+      if(song) 
+      {  
+        grab(song);
+        async function grab(name){
+         
+          var songs=  await songgrabber(name)
+          var data = {url:songs.url};
+              
+            io.in(clientInfo[socket.id].room).emit("music",data);
+        
+        }
       }
-    } console.log("args",args);
-    if(args[0]=="pause")
+    } 
+    // console.log("args",args);
+    if(args[0]==".pause")
     {
       io.in(clientInfo[socket.id].room).emit("pause",{});
       
@@ -131,5 +198,5 @@ io.on("connection", function(socket) {
   });
 });
 http.listen(PORT, function() {
-  console.log("server started");
+  console.log("server started at http://localhost:3000");
 });
