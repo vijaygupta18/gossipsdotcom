@@ -15,14 +15,18 @@ h1 {
 }
 .mymessages {
    text-align: right;
-  color: #1f5385;
-  font-family:Arial, Helvetica, sans-serif;
-  font-size: 1.1em;
-  font-weight: bold;
+  color: #145383;
+  font-family:Helvetica;
+    font-size: 1em;
+  font-weight:600;
 }
 ul.messages.list-group {
-  max-height: 45vh;
+  max-height: 48vh;
   overflow-y: scroll;
+  color: #272727;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight:600;
 }
 .typing {
   font-style: italic;
